@@ -13,3 +13,5 @@ def webpage2(request):
     return render(request,"page2.html")
 
     
+
+    

@@ -26,6 +26,7 @@ urlpatterns = [
     path("", index.main),
     path("page1", index.webpage1),
     path("page2", index.webpage2),
+    
   
 
 ]  
