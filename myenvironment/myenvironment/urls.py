@@ -17,18 +17,27 @@ from django.conf import settings
 
 from django.contrib import admin
 from django.conf.urls.static import static
-from django.urls import path
+from django.urls import path, include
 
 from . import index
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    
     path("", index.main),
-    path("page1", index.webpage1),
-    path("page2", index.webpage2),
-    
-  
+    path("navbar", index.nav, name='navbar'),
+    path("page1", index.webpage1, name='page1'),
+    path("page2", index.webpage2, name='page2'),
+    path("studattendence", index.webpage3, name='studattendence'),
+    path("teachattendence", index.webpage4,name='teachattendence' ) ,
+    path("teachersprof", index.webpage5,name='teachersprof'),
+    path("studentprof", index.webpage6,name='studentprof'),
+    path("studresult", index.webpage7,name='studresult'),
 
+    path("class", index.webpage8,name='class'),
+    path("timetable", index.webpage9,name='timetable'),
+    path("contact", index.webpage10, name='contact'),
+    path("registration", index.webpage11, name='registration'),
+  
+    path("ass", index.webpage12),
+    path("schedule", index.webpage13),
 ]  
 if settings.DEBUG:
     urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
